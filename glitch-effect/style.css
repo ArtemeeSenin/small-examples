@@ -1,13 +1,66 @@
+@keyframes wiggle {
+    from {
+        background-position: 0 0;
+        filter: hue-rotate(0deg)
+    }
+    10% {
+        background-position: 4px 0;
+    }
+    13% {
+        background-position: -4px 0;
+    }
+    16% {
+        background-position: 12px 0;
+    }
+    19% {
+        background-position: -16px 0;
+    }
+    21% {
+        background-position: -24px 0;
+    }
+    24% {
+        background-position: -52px 0;
+    }
+    27% {
+        background-position: 10px 22px;
+    }
+    30% {
+        background-position: -40px -10px;
+    }
+    33% {
+        background-position: 18px -6px;
+    }
+    36% {
+        background-position: 5px 0;
+        filter: hue-rotate(360deg);
+    }
+    40% {
+        background-position: 0 0;
+        filter: hue-rotate(0deg)
+    }
+    to {
+        background-position: 0 0;
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
 }
+.glitch-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 .glitch {
     position: absolute;
-    width: 110%;
-    height: 110vh;
-    top: -5vh;
-    left: -5%;
+    width: 106%;
+    height: 106vh;
+    top: -3vh;
+    left: -3%;
     background: url(img/street-1080.jpg);
     background: -webkit-image-set(
         url(img/street-1080.jpg) 1x,
@@ -17,4 +70,27 @@ body {
         url(img/street-1080.jpg) 1x,
         url(img/street-2349.jpg) 2x
     );
+    background-size: cover;
+}
+.glitch:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(img/street-1080.jpg);
+    background: -webkit-image-set(
+        url(img/street-1080.jpg) 1x,
+        url(img/street-2349.jpg) 2x
+    );
+    background: image-set(
+        url(img/street-1080.jpg) 1x,
+        url(img/street-2349.jpg) 2x
+    );
+    background-size: cover;
+    background-position: 5px 0;
+    opacity: .5;
+    animation: wiggle 2s ease-in-out 0.5s infinite;
+    mix-blend-mode: hard-light;
 }
