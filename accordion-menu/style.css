@@ -1,0 +1,85 @@
+body {
+    font-family: sans-serif;
+}
+
+.menu, .sub-menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.btn, .link {
+    text-decoration: none;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu {
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.menu-item {
+    border-top: 1px solid #74b9ff;
+    overflow: hidden;
+}
+
+.btn {
+    display: block;
+    padding: 16px 20px;
+    background-color: #0984e3;
+    color: #fff;
+    position: relative;
+}
+.btn:before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: #0984e3;
+    left: 20px;
+    bottom: -7px;
+    transform: rotate(45deg);
+}
+.btn i {
+    margin-right: 10px;
+}
+
+.sub-menu {
+    background-color: #333;
+    color: #fff;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .3s;
+}
+.sub-menu .link {
+    display: block;
+    padding: 16px 26px;
+    color: #fff;
+    font-size: 14px;
+    margin: 4px 0;
+    position: relative;
+}
+.sub-menu .link:before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background-color: #74b9ff;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .3s;
+}
+.sub-menu .link:hover:before {
+    opacity: 1;
+}
+.menu-item:target .sub-menu {
+    max-height: 10em;
+}
