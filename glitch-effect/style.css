@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.glitch {
+    position: absolute;
+    width: 110%;
+    height: 110vh;
+    top: -5vh;
+    left: -5%;
+    background: url(img/street-1080.jpg);
+    background: -webkit-image-set(
+        url(img/street-1080.jpg) 1x,
+        url(img/street-2349.jpg) 2x
+    );
+    background: image-set(
+        url(img/street-1080.jpg) 1x,
+        url(img/street-2349.jpg) 2x
+    );
+}
