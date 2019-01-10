@@ -14,3 +14,43 @@ body {
     overflow-x: hidden;
     font-family: 'Luna', sans-serif;
 }
+
+header {
+    position: relative;
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 30vw 0 5vw;
+    transform-style: inherit;
+    width: 100vw;
+}
+header {
+    padding-top: 40vh;
+}
+
+header h1, header p {
+    text-align: center;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    display: block;
+    background: url(img/bg-full.jpg);
+    background: -webkit-image-set(
+        url(img/bg-medium.jpg) 1x,
+        url(img/bg-full.jpg) 2x
+    );
+    background: image-set(
+        url(img/bg-medium.jpg) 1x,
+        url(img/bg-full.jpg) 2x
+    );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateZ(-1px) scale(2);
+    transform-origin: center center 0;
+    z-index: -10;
+    min-height: 100vh;
+}
