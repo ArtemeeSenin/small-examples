@@ -1,0 +1,142 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.card {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: #fff;
+}
+.card__image {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#card__image01 {
+    background-image: url(img/amongst-the-giants.jpg);
+}
+#card__image02 {
+    background-image: url(img/home-outdoors.jpg);
+}
+#card__image03 {
+    background-image: url(img/mystic-walk.jpg);
+}
+
+.card__content-container {
+    padding: 10% 5%;
+    box-sizing: border-box;
+    width: 50%;
+    background: #0a0a0a;
+}
+.card__theme {
+    font-family: 'Poppins', sans-serif;
+    font-size: .8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: grey;
+}
+.card__heading {
+    margin: 2rem 0 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.8rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 1;
+    color: white;
+}
+.card__content {
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: .7rem;
+    line-height: 1.8;
+    font-weight: 300;
+    color: white;
+}
+.card__link {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #dedede;
+    opacity: .7;
+    cursor: pointer;
+    transition: opacity .3s;
+}
+.card__link::after  {
+    content: '\21a3';
+    margin-left: .2rem;
+}
+
+.nav {
+    height: 4rem;
+    width: 2rem;
+    position: absolute;
+    right: 2%;
+    bottom: 0;
+    top: 80%;
+    color: white;
+    margin: 0 auto;
+}
+
+.button--nav {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    color: white;
+    width: 100%;
+    height: 50%;
+    border: 0;
+    background-color: transparent;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.button--nav:focus {
+    outline: none;
+    box-shadow: 0 0 2px gray;
+}
+.button--nav::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 2rem;
+    left: 0;
+    top: 0;
+    margin: auto;
+    font-size: 1rem;
+    opacity: .6;
+    transition: opacity .3s;
+}
+#nav-prev::after {
+    content: '\2191';
+}
+#nav-next::after {
+    content: '\2193';
+}
+.button--nav:hover::after {
+    opacity: 1;
+}

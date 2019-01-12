@@ -5,10 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pages Slider</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,900" rel="preload" as="style">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <section class="slide active">
+        <div class="card">
+            <div class="card__image" id="card__image01"></div>
+            <div class="card__content-container">
+                <header>
+                    <p class="card__theme">Travel</p>
+                    <h2 class="card__heading">Amongst the giants</h2>
+                </header>
+                <div class="card__content">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi provident dolorum mollitia porro culpa enim eos dolorem recusandae ut pariatur?</p>
+                </div>
+                <a href="" class="card__link">Read</a>
+            </div>
+        </div>
+    </section>
+    <section class="slide">
+        <div class="card">
+            <div class="card__image" id="card__image02"></div>
+            <div class="card__content-container">
+                <header>
+                    <p class="card__theme">Travel</p>
+                    <h2 class="card__heading">Home outdoors</h2>
+                </header>
+                <div class="card__content">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi provident dolorum mollitia porro
+                        culpa enim eos dolorem recusandae ut pariatur?</p>
+                </div>
+                <a href="" class="card__link">Read</a>
+            </div>
+        </div>
+    </section>
+    <section class="slide">
+        <div class="card">
+            <div class="card__image" id="card__image03"></div>
+            <div class="card__content-container">
+                <header>
+                    <p class="card__theme">Travel</p>
+                    <h2 class="card__heading">A mystic walk</h2>
+                </header>
+                <div class="card__content">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi provident dolorum mollitia porro
+                        culpa enim eos dolorem recusandae ut pariatur?</p>
+                </div>
+                <a href="" class="card__link">Read</a>
+            </div>
+        </div>
+    </section>
+    <nav class="nav">
+        <button class="button button--nav" id="nav-prev"></button>
+        <button class="button button--nav" id="nav-next"></button>
+    </nav>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
